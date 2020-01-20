@@ -6,11 +6,9 @@ Only the [templating functionality](https://github.com/jwilder/dockerize#using-t
 
 ## What it Does
 
-Plese note that the **default Nginx configuration setup is unchanged**
+Please note that the **default Nginx configuration setup is unchanged**.
 
 Configuration files are just modified to support templating, so you can modify the values via environment variables.
-Two configuration files can be changed with environment variables.
-Take a look at those files to see what variables are supported.
 
 - [`nginx.conf`](build-assets/nginx.conf)
 - [`default.conf`](build-asses/default.con)
@@ -21,7 +19,7 @@ You can also mount a custom configuration directory, and all configuration files
 
 `docker run host_template_dir:/etc/nginx/custom.tmpl.d ivandotv/nginx-dockerize`
 
-From inside the container after processing the files in `/etc/Nginx/custom.tmpl.d` they are moved to the `/etc/nginx/custom.d` and loaded.
+When files are processed they are moved to the `/etc/nginx/custom.d` and included.
 
 ## Building the Image
 
